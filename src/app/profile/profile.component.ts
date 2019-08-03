@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-profile',
@@ -8,13 +8,17 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class ProfileComponent implements OnInit {
 
-  constructor(private route: ActivatedRoute) {
+  constructor(private route: ActivatedRoute, private router: Router) {
     console.log('snapshot ' + this.route.snapshot.paramMap.get('id'));
     this.route.paramMap.subscribe(params => console.log('paramMap.subscribe ' + params.get('id')));
     this.route.queryParamMap.subscribe(params => console.log('queryParamMap.subscribe ' + params.get('id')));
   }
 
   ngOnInit() {
+  }
+
+  goHome() {
+    this.router.navigate(['/'], {queryParams : {id: 1}});
   }
 
 }
