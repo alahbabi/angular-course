@@ -44,4 +44,10 @@
           <!-- Can change val with this method because i m using two way binding -->
 <input type="text" [(ngModel)] = "val" (keyup.enter)="onKeyUpTwoWayBinding()"/><br>
 
+<!-- Access elements -->
+  <!-- Template variable -->
+<input #myInput type="text" (keyup.enter) = "onKeyUpTemplateVar(myInput)" />
+
+<button (click)="onKeyUpTemplateVar(myInput)">Click</button>
+
 

@@ -40,4 +40,8 @@ export class MyCompComponent implements OnInit {
     console.log(this.val);
   }
 
+  onKeyUpTemplateVar(e) {
+    console.log(e.value);
+  }
+
 }
