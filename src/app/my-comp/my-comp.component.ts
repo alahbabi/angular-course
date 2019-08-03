@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef, Input } from '@angular/core';
 
 @Component({
   selector: 'app-my-comp',
@@ -8,6 +8,8 @@ import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 export class MyCompComponent implements OnInit {
 
   @ViewChild('myInput') myInput: ElementRef;
+
+  @Input() myNum ;
 
   number = 5 ;
 
