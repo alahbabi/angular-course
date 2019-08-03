@@ -1,3 +1,7 @@
+<a [routerLink]="['/']">Home</a>
+<a [routerLink]="['/profile']">Profile</a>
+<router-outlet></router-outlet>
+
 <app-my-comp [myNum]="number" (myEvent)="done($event)">
   <ng-container class="abdelkarim">Hello Abdelkarim</ng-container>
 </app-my-comp>
