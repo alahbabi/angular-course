@@ -17,6 +17,14 @@ export class MyCompComponent implements OnInit {
 
   val = 'Hello';
 
+  open = true ;
+
+  numberOfSwitch = 2 ;
+
+  courses = ['Java' , 'Node Js', 'Spring'];
+
+  test = false ;
+
   constructor() { }
 
   ngOnInit() {

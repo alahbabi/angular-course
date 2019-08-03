@@ -53,4 +53,43 @@
   <!-- View child -->
 <button (click)="onKeyUpElementChild()">Click elemennt child </button>
 
+<!-- Directives -->
+<div *ngIf = "open">Open</div>
+<div *ngIf = "!open">Close</div>
+
+<div *ngIf = "!open; else close">Open TWO </div>
+<ng-template #close>
+  Close TWO
+</ng-template>
+
+<div [ngSwitch]="numberOfSwitch">
+  <div *ngSwitchCase="1">One</div>
+  <div *ngSwitchCase="2">Two</div>
+  <div *ngSwitchDefault>Three</div>
+</div>
+
+<div *ngFor="let course of courses; index as i" >
+  {{i + 1 }} - {{course}}
+</div>
+  <!-- first element -->
+<div *ngFor="let course of courses; first as i" [style.color]="i ? 'green' : 'black'"  >
+  {{course}}
+</div>
+  <!-- Zawji -->
+<div *ngFor="let course of courses; even as i" [style.color]="i ? 'red' : 'black'"  >
+  {{course}}
+</div>
+<!-- Fardi -->
+<div *ngFor="let course of courses; odd as i" [style.color]="i ? 'blue' : 'black'"  >
+  {{course}}
+</div>
+
+<div [ngStyle]="{
+  color: test ? 'green' : 'black',
+  backgroundColor : test ? 'black' : 'green'
+}"> ng Style</div>
+
+<div [ngClass]="{
+  'green': test
+}"> ng Class</div>
 
