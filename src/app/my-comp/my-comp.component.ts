@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 
 @Component({
   selector: 'app-my-comp',
@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./my-comp.component.css']
 })
 export class MyCompComponent implements OnInit {
+
+  @ViewChild('myInput') myInput: ElementRef;
 
   number = 5 ;
 
@@ -18,6 +20,7 @@ export class MyCompComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    console.log(this.myInput);
   }
 
   onClick() {
@@ -42,6 +45,10 @@ export class MyCompComponent implements OnInit {
 
   onKeyUpTemplateVar(e) {
     console.log(e.value);
+  }
+
+  onKeyUpElementChild() {
+    console.log(this.myInput.nativeElement);
   }
 
 }
