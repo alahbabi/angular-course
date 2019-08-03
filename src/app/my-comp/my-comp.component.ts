@@ -8,6 +8,11 @@ import { Component, OnInit } from '@angular/core';
 export class MyCompComponent implements OnInit {
 
   number = 5 ;
+
+  active = true ;
+
+  notActive = false ;
+
   constructor() { }
 
   ngOnInit() {
