@@ -28,3 +28,20 @@
 <h1 [style.color] = "active ? 'green' : 'black'">Green user with style binding</h1>
 <h1 [style.backgroundColor] = "active ? 'green' : 'black'">Green user with style binding</h1>
 
+<!-- Event binding -->
+<h1 (click)="onClick()">Click</h1>
+
+<h1 (click)="onClickWithEvent($event)">Click with event</h1>
+
+<input type="text" placeholder="onKeyUp event" (keyup)="onKeyUp($event)"/><br>
+
+<input type="text" placeholder="onKeyUp with enter event" (keyup.enter)="onKeyUp($event)"/><br>
+
+<input type="text" placeholder="onKeyUp with control z event" (keyup.control.z)="onKeyUp($event)"/><br>
+
+          <!-- Can t change val with this method because i m using one way binding -->
+<input type="text" [value] = "val" (keyup.enter)="onKeyUpOneWayBinding()" /><br>
+          <!-- Can change val with this method because i m using two way binding -->
+<input type="text" [(ngModel)] = "val" (keyup.enter)="onKeyUpTwoWayBinding()"/><br>
+
+

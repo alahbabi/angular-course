@@ -13,9 +13,31 @@ export class MyCompComponent implements OnInit {
 
   notActive = false ;
 
+  val = 'Hello';
+
   constructor() { }
 
   ngOnInit() {
+  }
+
+  onClick() {
+    console.log('click');
+  }
+
+  onClickWithEvent(e) {
+    console.log(e.target);
+  }
+
+  onKeyUp(e) {
+    console.log(e.target.value);
+  }
+
+  onKeyUpOneWayBinding() {
+    console.log(this.val);
+  }
+
+  onKeyUpTwoWayBinding() {
+    console.log(this.val);
   }
 
 }
