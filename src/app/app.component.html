@@ -1,5 +1,7 @@
 <a [routerLink]="['/']">Home</a>
-<a [routerLink]="['/profile']">Profile</a>
+<a [routerLink]="['/profile', 1]">Profile 1</a>
+<a [routerLink]="['/profile', 2]">Profile 2</a>
+<a routerLink="/profile" [queryParams]="{id: 3}">Profile 3</a>
 <router-outlet></router-outlet>
 
 <app-my-comp [myNum]="number" (myEvent)="done($event)">
