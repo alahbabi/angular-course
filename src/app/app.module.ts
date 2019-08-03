@@ -8,6 +8,7 @@ import { MyCompComponent } from './my-comp/my-comp.component';
 import { HomeComponent } from './home/home.component';
 import { ProfileComponent } from './profile/profile.component';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { GreenDirective } from './directives/green.directive';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { NotFoundComponent } from './not-found/not-found.component';
     MyCompComponent,
     HomeComponent,
     ProfileComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    GreenDirective
   ],
   imports: [
     BrowserModule,
