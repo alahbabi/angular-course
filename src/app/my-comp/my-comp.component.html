@@ -2,3 +2,20 @@
 <p>my-comp works! {{number}}</p>
 <!-- Property binding-->
 <h1 [textContent]="number"></h1>
+
+<!--
+  Can't bind to 'colspan' since it isn't a known property of 'td'.Angular
+<table>
+  <tr>
+    <td [colspan]="number"></td>
+  </tr>
+</table>
+-->
+
+<!-- Attribut binding -->
+<table>
+  <tr>
+    <td [attr.colspan]="number"></td>
+  </tr>
+</table>
+
