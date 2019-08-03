@@ -8,4 +8,8 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'angular-course';
   number = 5 ;
+
+  done(e) {
+    console.log(e)
+  }
 }

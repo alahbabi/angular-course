@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild, ElementRef, Input } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-my-comp',
@@ -10,6 +10,8 @@ export class MyCompComponent implements OnInit {
   @ViewChild('myInput') myInput: ElementRef;
 
   @Input() myNum ;
+
+  @Output() myEvent = new EventEmitter();
 
   number = 5 ;
 
@@ -59,6 +61,10 @@ export class MyCompComponent implements OnInit {
 
   onKeyUpElementChild() {
     console.log(this.myInput.nativeElement);
+  }
+
+  onClickEventOutput() {
+    this.myEvent.emit(this.courses);
   }
 
 }
