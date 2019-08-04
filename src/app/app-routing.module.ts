@@ -4,6 +4,7 @@ import { HomeComponent } from './home/home.component';
 import { ProfileComponent } from './profile/profile.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { AnimationsComponent } from './animations/animations.component';
+import { HttpClientExampleComponent } from './http-client-example/http-client-example.component';
 
 
 const routes: Routes = [
@@ -11,6 +12,7 @@ const routes: Routes = [
   {path: 'profile', component : ProfileComponent},
   {path: 'profile/:id', component : ProfileComponent},
   {path: 'animation', component : AnimationsComponent},
+  {path: 'httpex', component : HttpClientExampleComponent},
   {path: '**', component : NotFoundComponent}
 ];
 

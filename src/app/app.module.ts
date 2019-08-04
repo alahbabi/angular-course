@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { FormsModule } from '@angular/forms';
@@ -13,6 +14,7 @@ import { GreenDirective } from './directives/green.directive';
 import { CopyDirective } from './directives/copy.directive';
 import { EvenPipe } from './pipes/even.pipe';
 import { AnimationsComponent } from './animations/animations.component';
+import { HttpClientExampleComponent } from './http-client-example/http-client-example.component';
 
 @NgModule({
   declarations: [
@@ -24,13 +26,15 @@ import { AnimationsComponent } from './animations/animations.component';
     GreenDirective,
     CopyDirective,
     EvenPipe,
-    AnimationsComponent
+    AnimationsComponent,
+    HttpClientExampleComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
