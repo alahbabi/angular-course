@@ -1,4 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -11,6 +12,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { GreenDirective } from './directives/green.directive';
 import { CopyDirective } from './directives/copy.directive';
 import { EvenPipe } from './pipes/even.pipe';
+import { AnimationsComponent } from './animations/animations.component';
 
 @NgModule({
   declarations: [
@@ -21,12 +23,14 @@ import { EvenPipe } from './pipes/even.pipe';
     NotFoundComponent,
     GreenDirective,
     CopyDirective,
-    EvenPipe
+    EvenPipe,
+    AnimationsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

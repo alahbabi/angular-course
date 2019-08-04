@@ -1,9 +1,14 @@
+<input type="checkbox" (change)="show = !show" ng-model="show" /> Examples
+<div class="row container-fluid" *ngIf="show" >
+  <app-my-comp [myNum]="number" (myEvent)="done($event)">
+    <ng-container class="abdelkarim">Hello Abdelkarim</ng-container>
+  </app-my-comp>
+</div>
 <a [routerLink]="['/']">Home</a>
 <a [routerLink]="['/profile', 1]">Profile 1</a>
 <a [routerLink]="['/profile', 2]">Profile 2</a>
 <a routerLink="/profile" [queryParams]="{id: 3}">Profile 3</a>
+<a [routerLink]="['/animation']">Animation</a>
 <router-outlet></router-outlet>
 
-<app-my-comp [myNum]="number" (myEvent)="done($event)">
-  <ng-container class="abdelkarim">Hello Abdelkarim</ng-container>
-</app-my-comp>
+
