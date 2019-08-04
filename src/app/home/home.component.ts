@@ -21,6 +21,8 @@ export class HomeComponent implements OnInit {
 
   show = false;
 
+  numberArray = [1, 3, 4 , 6];
+
   @HostListener('click') onClickCallHostListener() {
     console.log('Clicked inside component');
   }
@@ -28,6 +30,10 @@ export class HomeComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+  }
+
+  addNumber() {
+    this.numberArray.push(8);
   }
 
 }

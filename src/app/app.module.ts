@@ -10,6 +10,7 @@ import { ProfileComponent } from './profile/profile.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { GreenDirective } from './directives/green.directive';
 import { CopyDirective } from './directives/copy.directive';
+import { EvenPipe } from './pipes/even.pipe';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { CopyDirective } from './directives/copy.directive';
     ProfileComponent,
     NotFoundComponent,
     GreenDirective,
-    CopyDirective
+    CopyDirective,
+    EvenPipe
   ],
   imports: [
     BrowserModule,

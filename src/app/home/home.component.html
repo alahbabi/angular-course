@@ -28,4 +28,13 @@
   <p>Piping date : {{ myBirthday | date}}</p>
   <p>Piping date format (check doc) : {{ myBirthday | date : 'shortDate'}}</p>
   <p>Piping date format 'yyyy/MM/dd' (check doc) : {{ myBirthday | date : 'yyyy/MM/dd'}}</p>
+
+  <p *ngFor="let n of numberArray | even">
+    {{ n }}
+  </p>
+
+  <button (click)="addNumber()">Add number</button>
+
 </div>
+
+
