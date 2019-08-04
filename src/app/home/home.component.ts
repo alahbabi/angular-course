@@ -9,6 +9,18 @@ export class HomeComponent implements OnInit {
 
   myColor = '#080';
 
+  myText = 'my Text';
+
+  myObject = {name: 'Abdelkarim'};
+
+  myNumber = 1250.3454;
+
+  myPercent = 0.5;
+
+  myBirthday = new Date();
+
+  show = false;
+
   @HostListener('click') onClickCallHostListener() {
     console.log('Clicked inside component');
   }

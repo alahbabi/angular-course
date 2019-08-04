@@ -5,3 +5,27 @@
 <p *appCopy = 2>
   Home works two
 </p>
+
+<input type="checkbox" (change)="show = !show" ng-model="show" /> Pipe Examples
+
+<div class="row container-fluid" *ngIf="show" >
+  <p>Lower case pipe : {{ myText | lowercase}}</p>
+  <p>Upper case pipe : {{ myText | uppercase}}</p>
+  <p>Title case pipe : {{ myText | titlecase}}</p>
+  <p>Slice case pipe 0 -> 5 : {{ myText | slice : 0 : 5}}</p>
+  <p>Slice case pipe 0 -> 4 : {{ myText | slice : 0 : 4}}</p>
+  <p>Error when piping object : {{ myObject }}</p>
+  <p>Piping object : {{ myObject  | json }}</p>
+  <p>Piping number : {{ myNumber  | number }}</p>
+  <p>Piping number 6.2-2 : {{ myNumber  | number : '6.2-2'}}</p>
+  <p>Piping number 5.2-3 : {{ myNumber  | number : '5.2-3'}}</p>
+  <p>Piping percent 0.5 : {{ myPercent  | percent }}</p>
+  <p>Piping currency $ (Default): {{ myNumber  | currency }}</p>
+  <p>Piping currency Euro : {{ myNumber  | currency : 'EUR' }}</p>
+  <p>Piping currency CAD symbol: {{ myNumber  | currency : 'CAD' : 'symbol'}}</p>
+  <p>Piping currency CAD symbol narrow: {{ myNumber  | currency : 'CAD' : 'symbol-narrow'}}</p>
+  <p>Piping currency Euro with code : {{ myNumber  | currency : 'EUR' : 'code'}}</p>
+  <p>Piping date : {{ myBirthday | date}}</p>
+  <p>Piping date format (check doc) : {{ myBirthday | date : 'shortDate'}}</p>
+  <p>Piping date format 'yyyy/MM/dd' (check doc) : {{ myBirthday | date : 'yyyy/MM/dd'}}</p>
+</div>

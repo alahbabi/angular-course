@@ -7,7 +7,7 @@ import { Component, OnInit, ViewChild, ElementRef, Input, Output, EventEmitter }
 })
 export class MyCompComponent implements OnInit {
 
-  @ViewChild('myInput') myInput: ElementRef;
+  @ViewChild('myInput', {static: false}) myInput: ElementRef;
 
   @Input() myNum ;
 
