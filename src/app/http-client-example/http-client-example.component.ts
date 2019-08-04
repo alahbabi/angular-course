@@ -19,10 +19,7 @@ export class HttpClientExampleComponent implements OnInit {
       }
     });
 
-    this.http.get('https://jsonplaceholder.typicode.com/posts', {
-      observe: 'body',
-      params: (new HttpParams()).set('userId', '1')
-    }).subscribe((e) => {
+    this.http.get('https://jsonplaceholder.typicode.com/posts').subscribe((e) => {
         console.log(e);
     });
 
