@@ -7,6 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'angular-course';
+  show = false;
   number = 5 ;
 
   done(e) {
