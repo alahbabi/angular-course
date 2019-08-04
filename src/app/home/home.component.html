@@ -37,4 +37,18 @@
 
 </div>
 
+<input type="checkbox" (change)="showForm = !showForm" ng-model="show" /> Dirven forms Examples
+<div class="row container-fluid" *ngIf="showForm" >
+  <form #f="ngForm" (ngSubmit)="onSubmit(f)">
+    <div ngModelGroup="user">
+      <input #name="ngModel" type="text" name = "name" required minlength="4" ngModel>
+      <p *ngIf="name.touched && name.errors?.required">this input is req.</p>
+
+      <input #email="ngModel" type="text" name = "email" email ngModel>
+    </div>
+    <button type="submit">Submit</button>
+    <button type="button" (click)="reset(f)">Reset</button>
+  </form>
+</div>
+
 

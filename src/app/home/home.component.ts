@@ -1,4 +1,5 @@
 import { Component, OnInit, HostListener } from '@angular/core';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-home',
@@ -21,7 +22,13 @@ export class HomeComponent implements OnInit {
 
   show = false;
 
+  showForm = false;
+
   numberArray = [1, 3, 4 , 6];
+
+  name;
+
+  email;
 
   @HostListener('click') onClickCallHostListener() {
     console.log('Clicked inside component');
@@ -36,4 +43,16 @@ export class HomeComponent implements OnInit {
     this.numberArray.push(8);
   }
 
+  onSubmit(f) {
+    console.log(f);
+  }
+
+  reset(f: NgForm) {
+    f.setValue({
+        user : ({
+          name: 'name',
+          email: 'email'
+        })
+    });
+  }
 }
