@@ -9,6 +9,7 @@ import { HomeComponent } from './home/home.component';
 import { ProfileComponent } from './profile/profile.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { GreenDirective } from './directives/green.directive';
+import { CopyDirective } from './directives/copy.directive';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { GreenDirective } from './directives/green.directive';
     HomeComponent,
     ProfileComponent,
     NotFoundComponent,
-    GreenDirective
+    GreenDirective,
+    CopyDirective
   ],
   imports: [
     BrowserModule,
