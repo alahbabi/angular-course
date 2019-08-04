@@ -31,7 +31,7 @@ import { MyInterceptor } from './interceptors/MyInterceptor';
     HttpClientExampleComponent
   ],
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
     AppRoutingModule,
     FormsModule,
     BrowserAnimationsModule,
